@@ -13,7 +13,7 @@ CREATE TABLE GOODS (
 
 CREATE TABLE RECEIPTS (
   ReceiptNumber int NOT NULL PRIMARY KEY,
-  Date varchar(20) NOT NULL,
+  Date DATE NOT NULL,
   CustomerId int NOT NULL,
   FOREIGN KEY (CustomerId) REFERENCES CUSTOMERS(Id)
 );
