@@ -7,7 +7,7 @@ INSERT INTO SONGS VALUES (6, 'Wading in Deeper');
 INSERT INTO SONGS VALUES (7, 'Le Pop');
 INSERT INTO SONGS VALUES (8, 'Der Kapitan');
 INSERT INTO SONGS VALUES (9, 'Virginia Clemm');
-INSERT INTO SONGS VALUES (10, Play My Darling,  Play);
+INSERT INTO SONGS VALUES (10, 'Play My Darling,  Play');
 INSERT INTO SONGS VALUES (11, 'To the Sea');
 INSERT INTO SONGS VALUES (12, 'Mother Superior');
 INSERT INTO SONGS VALUES (13, 'Ain''t no Thang');
