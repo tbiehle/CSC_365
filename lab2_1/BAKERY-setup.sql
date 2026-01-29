@@ -22,6 +22,7 @@ CREATE TABLE ITEMS (
   Receipt int NOT NULL,
   Ordinal int NOT NULL,
   Item varchar(30) NOT NULL,
+  PRIMARY KEY (Receipt, Ordinal),
   FOREIGN KEY (Receipt) REFERENCES RECEIPTS(ReceiptNumber),
   FOREIGN KEY (Item) REFERENCES GOODS(Id)
 );

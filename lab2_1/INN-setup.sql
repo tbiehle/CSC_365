@@ -6,7 +6,7 @@ CREATE TABLE ROOMS (
   maxOccupancy tinyint NOT NULL,
   basePrice decimal(6, 2),
   decor varchar(100)
-)
+);
 
 CREATE TABLE RESERVATIONS (
   Code int NOT NULL PRIMARY KEY,
@@ -19,4 +19,4 @@ CREATE TABLE RESERVATIONS (
   Adults tinyint NOT NULL,
   Kids tinyint,
   FOREIGN KEY (Room) REFERENCES ROOMS(RoomId)
-)
+);
