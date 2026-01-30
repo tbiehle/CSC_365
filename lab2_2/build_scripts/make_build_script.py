@@ -2,7 +2,7 @@ import csv
 
 bakery_datasets = ["customers", "goods", "items", "receipts"]
 katz_datasets = ["albums", "band", "instruments", "performance", "songs", "tracklists", "vocals"]
-wine_datasets = ["appellations", "grapes", "wine"]
+wine_datasets = ["appellation", "grapes", "wine"]
 
 print("Writing BAKERY scripts...")
 for dataset in bakery_datasets:
@@ -29,8 +29,12 @@ for dataset in bakery_datasets:
 
 print("Writing WINE scripts...")
 for dataset in wine_datasets:
+  if dataset == "appellation":
+    dataset_name = "appellations"
+  else:
+    dataset_name = dataset
   with open(f"./WINE/WINE-build-{dataset}.sql", "w") as sql:
-    with open(f"../Datasets CSC365/WINE/{dataset}.csv") as data:
+    with open(f"../Datasets CSC365/WINE/{dataset_name}.csv") as data:
       reader = csv.DictReader(data)
       for row in reader:
         try:
