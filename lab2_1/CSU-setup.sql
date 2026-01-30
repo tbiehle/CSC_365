@@ -7,9 +7,10 @@ CREATE TABLE CAMPUSES (
 );
 
 CREATE TABLE CSU_FEES(
-  Campus int PRIMARY KEY NOT NULL,
+  Campus int NOT NULL,
   Year int,
   CampusFee int NOT NULL,
+  PRIMARY KEY (Campus, Year),
   FOREIGN KEY (Campus) REFERENCES CAMPUSES(Id)
 );
 
@@ -17,6 +18,7 @@ CREATE TABLE DEGREES (
   Year int PRIMARY KEY NOT NULL,
   Campus int NOT NULL,
   Degrees int NOT NULL,
+  PRIMARY KEY (Year, Campus),
   FOREIGN KEY (Campus) REFERENCES CAMPUSES(Id)
 );
 
@@ -49,5 +51,6 @@ CREATE TABLE ENROLLMENTS(
 CREATE TABLE FACULTY(
   Campus int NOT NULL PRIMARY KEY,
   Year int NOT NULL,
+  PRIMARY KEY (Campus, Year),
   Faculty Decimal(10, 2)
 );
